@@ -158,7 +158,7 @@ let max = 20; // максимальная цена
 
 priceNumber = parseFloat(product.price);
 
-if (priceNumber && priceNumber >= min &&  priceNumber <= max) {
+if (priceNumber >= min &&  priceNumber <= max) {
     console.log(product.name);
 } else {
     console.log('Товаров не найдено');
