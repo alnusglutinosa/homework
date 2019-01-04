@@ -93,10 +93,21 @@ for (var key in stringReverse) {
 console.log(stringCorrect);
 
 // 3. Факториал числа - произведение всех натуральных чисел от 1 до n
-// включительно: 3! = 3*2*1, 5! = 5*4*3*2*1. С помощью циклов вычислить факториал числа 10. Использовать for.
+// включительно: 3! = 3*2*1, 5! = 5*4*3*2*1. С помощью циклов вычислить факториал числа 10. 
+
+//3.1 Использовать for. (с презентации)
 
 let factorial = 1; 
 for(let i = 2; i <= 10; i++) {
+    factorial *= i; 
+}
+
+console.log(`10! = ${factorial}`);
+
+// 3.2 Использовать for of. (piazza)
+let factorialArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+factorial = 1;
+for (let i of factorialArray) {
     factorial *= i; 
 }
    
@@ -123,9 +134,9 @@ console.log(stringEdit);
 
 
 // 5. Найти все нечетные числа от 1 до 15 включительно и вывести их в консоль. Использовать for of.
-let myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+let numberVariable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
-for (let value of myArray) {
+for (let value of numberVariable) {
     if (value % 2 !== 0) {
         console.log(value);
     }
