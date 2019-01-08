@@ -156,16 +156,17 @@ console.log('7.', changeCollection([1,2,3], ['a', 'b', 'c']));
 // funcGetUsers(users, “gender”, “male”); // [ {name: “Denis”, age: “29”, gender: “male”} , {name: “Ivan”, age: “20”, gender: “male”} ]
 
 function funcGetUsers(arrayUsers, checkField, checkValue) {
+
+    if (arguments.length < 3) {
+        return console.log("function funcGetUsers : need 3 argument");
+    }
+
     if (!Array.isArray(arrayUsers)) {
         return console.log("function funcGetUsers : arrayUsers not array");
     }
 
     if (typeof checkField !== "string") {
         return console.log('function funcGetUsers: checkField - not string');
-    }
-
-    if (!checkValue) {
-        return console.log('function funcGetUsers: checkValue - no argument');
     }
 
     let arrayCheck = [];
