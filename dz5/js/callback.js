@@ -104,11 +104,12 @@ function every(arrayNumbers, handler) {
         return console.log("function every : arrayNumbers - not Array");
     }
 
-    arrayNumbers.forEach(function(item, i, arr) {
-        if (!handler(item, i, arr)) {
+    for (let i = 0; i < arrayNumbers.length; i++) {
+        
+        if (!handler(arrayNumbers[i], i, arrayNumbers)) {
             return false;
         }
-    });
+    }
 
     return true;
 }
@@ -121,7 +122,7 @@ function numberMoreThan5(numberVariable, i, arr) {
     return numberVariable > 5;
 }
 
-console.log('2', every([1, 7, 5, 5, 4, 3], numberMoreThan5));
+console.log('2', every([50, 8, 8], numberMoreThan5));
 
 
 // Перебирающие методы. Задачи.
@@ -143,7 +144,7 @@ let arrayDetail = arrayVariable.map(function (numberVariable) {
 console.log("1 arrayDetail %o", arrayDetail);
 
 
-// 2.Проверить, содержит ли массив [12, 4, 50, 1, 0, 18, 40] элементы, равные нулю. Если да - вернуть false.
+// 2.Проверить, содержит ли массив [12, 4, 50, 1, 50, 18, 40] элементы, равные нулю. Если да - вернуть false.
 let arrayNumber = [12, 4, 50, 1, 0, 18, 40];
 
 let resultValue = arrayNumber.every(function (val) {
