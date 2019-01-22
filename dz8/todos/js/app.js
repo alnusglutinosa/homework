@@ -18,15 +18,15 @@
 //      д. обновить данные в таблице
 //      е. очистить форму
 
-let arrLocalTodos = localStorage.getItem("localTodosStorage") ? JSON.parse(localStorage.getItem("localTodosStorage")) : [];
 
-// const todosStorage = {
-//     todos: []
-// }
 
 const todosStorage = {
-    todos: arrLocalTodos
+    todos: []
 }
+
+// const todosStorage = {
+//     todos: arrLocalTodos
+// }
 
 
 // UI Elements
@@ -262,23 +262,27 @@ function alertTemplate(className, message) {
 function addFromStorage(countTodos) {
     if (todosStorage) {
         for (let i = 0; i < countTodos; i++) {
+            console.log(arrLocalTodos[i]);
             addNewTodoToStorage(arrLocalTodos[i].title, arrLocalTodos[i].text);
         }
-
-    } else {
-        addNewTodoToStorage('My title 1', 'My text 1');
     }
 }
 
-addFromStorage(arrLocalTodos.length);
+// if (arrLocalTodos.length) {
+//     addFromStorage(arrLocalTodos.length);
+// } else {
+    addNewTodoToStorage('My title 1', 'My text 1');
+// }
+
 
 // Make editing work
 
 function saveToLocalStorage() {
 
     // Delete
-    localStorage.removeItem('localTodosStorage'); 
-    localStorage.setItem("localTodosStorage", JSON.stringify({}));
+    //localStorage.removeItem('localTodosStorage'); 
+    clearLocalStorage();
+    //localStorage.setItem("localTodosStorage", JSON.stringify({}));
 
     //Add
     localStorage.setItem("localTodosStorage", JSON.stringify(todosStorage.todos));
@@ -289,7 +293,8 @@ function saveToLocalStorage() {
 
 function clearLocalStorage() {
     // Delete
-    localStorage.removeItem('localTodosStorage'); 
+    localStorage.setItem("localTodosStorage", JSON.stringify({}));
+    //localStorage.removeItem('localTodosStorage'); 
     alertMessage('alert-info', 'Список задач очищен в локальном хранилище');
 }
 
