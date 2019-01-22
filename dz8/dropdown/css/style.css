@@ -1,0 +1,11 @@
+.d-none {
+  display: none;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
+
+.dropdown-item {
+  color: blue;
+}
