@@ -50,7 +50,7 @@ function onSearchChange(event) {
             articles.forEach((article) => uiService.addArticle(article));
         } else {
             uiModal.clearModal();
-            uiModal.showModal("Новость не найдена!");
+            uiModal.showModal();
         }
     });
 }

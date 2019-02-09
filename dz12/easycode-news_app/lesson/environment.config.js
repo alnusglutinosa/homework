@@ -14,4 +14,8 @@ class ENV {
     static get category() {
         return 'technology';
     } 
+
+    static get textNewsNotFound() {
+        return 'Новость не найдена!!!';
+    } 
 }

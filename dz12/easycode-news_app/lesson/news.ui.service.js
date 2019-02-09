@@ -107,7 +107,7 @@ class ModalUI {
      * 
      * @param {Object} article 
      */
-    showModal(text = "") {
+    showModal(text = ENV.textNewsNotFound) {
         const template = ModalUI.generateModalTemplate(text);
         this.modalContent.insertAdjacentHTML("afterbegin", template);
         $('.modal').modal('open');
@@ -125,11 +125,10 @@ class ModalUI {
     * 
     * @param {String} text 
     */
-    static generateModalTemplate(text) {
+    static generateModalTemplate(text = ENV.textNewsNotFound) {
         return `
                 <div class="modal-content">
-                    <h4>Modal Header</h4>
-                    <p>${text}</p>
+                    <h4>${text}</h4>
                 </div>
 
                 <div class="modal-footer">
