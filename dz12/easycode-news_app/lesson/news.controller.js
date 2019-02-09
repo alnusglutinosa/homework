@@ -37,8 +37,6 @@ function onSelectChange(event) {
 function onSearchChange(event) {
     const search = searchSelect.value;
 
-    let response;
-
     if (search.length < 4) {
         return console.log("Введите значение для поиска (мин. 4 символа)");
     }
