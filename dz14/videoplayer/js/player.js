@@ -22,7 +22,6 @@ class VideoPlayer {
 
     /**
      * Toggle video player play/pause.
-     *  @param {Object} event - event leading to toggle.
      */
     toggle() {
         const method = this._video.paused ? 'play' : 'pause';
@@ -59,7 +58,7 @@ class VideoPlayer {
     }
 
     /**
-     * Set the volume.
+     * Set the playback rate.
      */
     _rateProgressHandler() {
         // Homework
