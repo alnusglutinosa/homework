@@ -27,7 +27,7 @@ function Planet(name) {
   * getName - get name planet.
   * @returns {String} Name value.
   */
-  this.getName = function () {
+  this.getName = function() {
     return 'Planet name is ' + this.name;
   }
 }
@@ -38,7 +38,7 @@ function Planet(name) {
 * @param {String} satelliteName - The satellite name value.
 */
 function PlanetWithSatellite(name, satelliteName) {
-  Planet.call(this, name); 
+  Planet.call(this, name);
   this.satelliteName = satelliteName;
   let parentGetName = this.getName;
 

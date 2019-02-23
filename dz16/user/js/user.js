@@ -49,7 +49,7 @@ Admin.prototype.constructor = Admin;
 * getInformation - get information of user
 * @returns {String} Information value
 */
-Admin.prototype.getInformation = function () {
+Admin.prototype.getInformation = function() {
   return User.prototype.getInformation.call(this) + ', super admin: ' + this.superAdmin;
 }
 
@@ -71,7 +71,7 @@ Guest.prototype.constructor = Guest;
 * getInformation - get information of user
 * @returns {String} Information value
 */
-Guest.prototype.getInformation = function () {
+Guest.prototype.getInformation = function() {
   return User.prototype.getInformation.call(this) + ', valid date: ' + this.validDate;
 }
 

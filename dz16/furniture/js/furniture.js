@@ -59,7 +59,7 @@ function HomeFurniture(name, price, forChildren) {
 
 HomeFurniture.prototype = Object.create(Furniture.prototype);
 HomeFurniture.prototype.constructor = HomeFurniture;
-HomeFurniture.prototype.getInformation = function () {
+HomeFurniture.prototype.getInformation = function() {
   return Furniture.prototype.getInformation.call(this) + ' for children: ' + this.forChildren + ',';
 }
 
