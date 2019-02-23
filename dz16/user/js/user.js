@@ -27,7 +27,7 @@ function User(name, dateRegistration) {
 * getInformation - get information of user
 * @returns {String} Information value
 */
-User.prototype.getInformation = function () {
+User.prototype.getInformation = function() {
     return this.name + ' ' + this.dateRegistration;
 }
 
